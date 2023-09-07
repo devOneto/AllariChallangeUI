@@ -1,0 +1,9 @@
+{
+  "name": "allari-challange-ui",
+  "version": "1.0.0",
+  "description": "Front-end code for Allari Fullstack developer position challange.",
+  "main": "index.js",
+  "scripts": { },
+  "author": "Joao Araujo",
+  "license": "ISC"
+}
