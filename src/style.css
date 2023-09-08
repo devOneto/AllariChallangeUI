@@ -33,8 +33,8 @@ main {
 
 #left-content{
     width: 25%;
-    min-height: 400px; 
     margin-right:5px;
+    padding: 100px auto;
 }
 
 #main-content{
@@ -119,4 +119,24 @@ footer{
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+#mousePositionContainer{
+  display: flex;
+  justify-content: space-around;
+  padding: 100px 0;
+}
+
+#mouseXPos{
+  padding: 10px 0px;
+  border: solid #fff;
+  width: 100px;
+  text-align: center;
+}
+
+#mouseYPos{
+  padding: 10px 0px;
+  border: solid #fff;
+  width: 100px;
+  text-align: center;
 }

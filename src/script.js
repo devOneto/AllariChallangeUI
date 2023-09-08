@@ -1,5 +1,10 @@
 let clock =  document.getElementById("clock");
+let mousePosX = document.getElementById("mouseXPos")
+let mousePosY = document.getElementById("mouseYPos")
+
 let slideIndex = 1;
+
+let mousePosition;
 
 function tick(){
     let date = new Date();
@@ -40,6 +45,16 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+function trackMousePosition(){
+  window.addEventListener('mousemove', (event) => {
+    mousePosition = { x: event.clientX, y: event.clientY };
+    mousePosX.innerHTML = "X: " + mousePosition.x + " px";
+    mousePosY.innerHTML = "Y: " + mousePosition.y + " px"
+  });
+}
+
 tick();
 
 showSlides(slideIndex);
+
+trackMousePosition();
