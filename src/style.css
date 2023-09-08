@@ -29,6 +29,7 @@ nav {
 main {
     display: flex; 
     margin-bottom: 15px;
+    min-height: 60vh;
 }
 
 #left-content{
@@ -51,7 +52,10 @@ main {
 footer{
     min-height: 50px;
     text-align: center;
-    padding: 10px 0;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #clock{

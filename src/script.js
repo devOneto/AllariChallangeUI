@@ -71,8 +71,6 @@ function searchFruits() {
   request.send();
 }
 
-
-
 btn.onclick = function (e) {
 
   let ripple = document.createElement("span");
