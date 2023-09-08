@@ -3,7 +3,7 @@
 }
 
 .bg-grey {
-    background-color: #ccc;
+    background-color: #ddd;
 }
 
 .bg-dark {
@@ -50,6 +50,8 @@ main {
 
 footer{
     min-height: 50px;
+    text-align: center;
+    padding: 10px 0;
 }
 
 #clock{
