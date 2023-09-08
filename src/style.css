@@ -1,0 +1,39 @@
+.bg-grey {
+    background-color: #ccc;
+}
+
+header {
+    min-height: 100px;
+    margin-bottom: 10px;
+}
+
+nav {
+    min-height: 50px;
+    margin-bottom: 10px;
+}
+
+main {
+    display: flex; 
+    margin-bottom: 15px;
+}
+
+#left-content{
+    flex-grow: 2; 
+    min-height: 400px; 
+    margin-right:5px;
+}
+
+#main-content{
+    flex-grow: 5;
+    min-height: 100px;
+    margin-right:5px;
+}
+
+#right-content{
+    flex-grow: 2; 
+    min-height: 100px;
+}
+
+footer{
+    min-height: 50px;
+}
