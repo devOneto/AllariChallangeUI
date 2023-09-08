@@ -1,15 +1,29 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .bg-grey {
     background-color: #ccc;
 }
 
+.bg-dark {
+    background-color: #333;
+}
+
+.text-light {
+    color: #fff;
+}
+
 header {
-    min-height: 100px;
     margin-bottom: 10px;
+    padding: 50px 0px;
 }
 
 nav {
     min-height: 50px;
     margin-bottom: 10px;
+    text-align: center;
+    padding: 5px 0px;
 }
 
 main {
@@ -36,4 +50,11 @@ main {
 
 footer{
     min-height: 50px;
+}
+
+#clock{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 28px;
 }
