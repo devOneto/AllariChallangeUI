@@ -1,6 +1,11 @@
 let clock =  document.getElementById("clock");
+
+let btn = document.getElementById("getFruitsButton");
+
 let mousePosX = document.getElementById("mouseXPos")
 let mousePosY = document.getElementById("mouseYPos")
+
+let fruitsList = document.getElementById("fruitsList")
 
 let slideIndex = 1;
 
@@ -52,6 +57,42 @@ function trackMousePosition(){
     mousePosY.innerHTML = "Y: " + mousePosition.y + " px"
   });
 }
+
+function searchFruits() {
+  var request = new XMLHttpRequest();
+  request.open('GET','https://localhost:7217/Fruit', true);
+  request.onload = (response) => {
+    let fruits = JSON.parse(request.responseText);
+    fruitsList.innerHTML = "";
+    fruits.forEach(fruit => {
+      fruitsList.innerHTML += "<li> Fruit Name: " + fruit.name + " , Color: " + fruit.color + ", Origin: " + fruit.origin;
+    });
+  }
+  request.send();
+}
+
+
+
+btn.onclick = function (e) {
+
+  let ripple = document.createElement("span");
+
+  ripple.classList.add("ripple");
+
+  this.appendChild(ripple);
+
+  let x = e.clientX - e.target.offsetLeft;
+  let y = e.clientY - e.target.offsetTop;
+
+  ripple.style.left = `${x}px`;
+  ripple.style.top = `${y}px`;
+
+  setTimeout(() => {
+      ripple.remove();
+  }, 300);
+
+  searchFruits()
+};
 
 tick();
 
