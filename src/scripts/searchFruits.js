@@ -1,6 +1,7 @@
 function searchFruits() {
     var request = new XMLHttpRequest();
-    request.open('GET','https://localhost:7217/Fruit', true);
+    // request.open('GET','https://localhost:7217/Fruit', true);
+    request.open('GET','https://allarichalangejoaoaraujoapi.azurewebsites.net/Fruit', true);
     request.onload = (response) => {
       let fruits = JSON.parse(request.responseText);
       fruitsList.innerHTML = "";
